@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASH.js Example</title>
+
+    <!-- Include DASH.js library from CDN -->
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>DASH.js Example</h1>
+    </header>
+
+    <section>
+        <h2>Sample Video</h2>
+
+        <!-- Video element for DASH.js player -->
+        <video controls></video>
+
+        <!-- JavaScript script for DASH.js initialization -->
+        <script>
+            function init() {
+                var video,
+                    player,
+                    url = 'https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd';
+
+                video = document.querySelector('video');
+                player = dashjs.MediaPlayer().create();
+                player.initialize(video, url, false);
+            }
+
+            // Call the init function after the page has loaded
+            window.onload = init;
+        </script>
+    </section>
+    
+</body>
+</html>
