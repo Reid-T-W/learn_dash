@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Load Multi Video</title>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Auto Load Multi Video</h1>
+    </header>
+
+    <section>
+        <div>
+            <video autoplay="" controls="">
+                <source src="https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd" type="application/dash+xml">
+            </video>
+        </div>
+        <div>
+            <video poster="http://mediapm.edgesuite.net/will/dash/temp/poster.png" controls="true">
+                <source src="https://dash.akamaized.net/digitalprimates/fraunhofer/480p_video/heaac_2_0_with_video/Sintel/sintel_480p_heaac2_0.mpd" type="application/dash+xml">
+            </video>
+        </div>
+        <div>
+            <video data-dashjs-player="" autoplay="" src="https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd" controls="true">
+            </video>
+        </div>
+    </section>
+    
+</body>
+</html>
